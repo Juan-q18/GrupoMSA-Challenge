@@ -356,7 +356,7 @@ Las capturas de la falla forzada de B6 están en `docs/evidencias/B6/`.
 - Checkout automatizado (se documenta BUG-001, pero no se automatiza).
 - Pagos, envíos, cupones y confirmación de órdenes.
 - Mobile, backend propio, base de datos o modificaciones a la aplicación bajo prueba.
-- Pipeline CI/CD obligatorio y ejecución cross-browser más allá de Chromium (Firefox queda opcional).
+- Pipeline CI/CD obligatorio y ejecución cross-browser: fuera de alcance; esta entrega se ejecuta solo en Chromium.
 - Corrección de defectos de la aplicación: el challenge es de pruebas, no de desarrollo del shop.
 
 ---

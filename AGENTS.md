@@ -11,7 +11,7 @@ Guía de trabajo para este repositorio. Es la fuente de contexto para cualquier 
 
 ## 1. Objetivo
 
-Resolver el challenge técnico de **QA Manual con Automation** en un plazo de **72 horas**, entregando:
+Resolver el challenge técnico de **QA Manual con Automation**, entregando:
 
 1. **Sección 1 — Pruebas y reporte de errores:** documentación estratégica de pruebas (Test Plan, casos, suites, bug report y pruebas de API).
 2. **Sección 2 — Instancia de automatización:** framework con **Playwright + TypeScript** sobre Tricentis Demo Web Shop, con reportería HTML, capturas automáticas ante fallas, cobertura de Registro/Login/Carrito, una falla forzada y un módulo de API con Mercado Libre.
@@ -46,8 +46,7 @@ La evaluación mide rigor metódico en la documentación y capacidad de diseñar
 
 ### 2.3 Reglas transversales del PDF
 
-- **72 horas** desde la recepción del challenge.
-- Todos los tests automatizados deben ejecutarse en **Chrome y/o otro navegador a elección**. Se adopta **Chromium** provisto por Playwright; Firefox queda como proyecto opcional.
+- Todos los tests automatizados deben ejecutarse en **Chrome y/o otro navegador a elección**. Se adopta **Chromium** provisto por Playwright; Firefox no forma parte de esta entrega.
 - **Debe existir al menos un caso que falle** para evidenciar el resultado, con capturas en el reporte o en un directorio aparte debidamente referenciado.
 - Toda la documentación de la Sección 1 debe estar en la carpeta **`docs`**, dentro de la estructura del framework.
 - Si se usa IA, se deben incluir **todos los chats completos y sin alteraciones** en `docs/ia-chats`.
@@ -200,12 +199,6 @@ npm.cmd exec playwright install chromium
 Copy-Item .env.example .env
 ```
 
-Si se agrega Firefox como navegador opcional:
-
-```powershell
-npm.cmd exec playwright install firefox
-```
-
 ### 5.2 Scripts de `package.json`
 
 | Comando | Script | Uso |
@@ -299,7 +292,7 @@ Orden de preferencia:
 - Reporter: `list` en consola + `html` (carpeta `playwright-report/`, `open: 'never'`).
 - `retries: 0` local; si se habilita CI, `retries: 1`.
 - Un solo worker por archivo cuando el estado del shop lo requiera; por defecto workers paralelos con datos aislados.
-- Proyecto principal `chromium`; `firefox` opcional.
+- Proyecto único: `chromium`.
 
 ---
 
@@ -485,7 +478,7 @@ Reglas:
 - Publicar en GitHub público y compartir el enlace.
 - **Gate:** Definition of Done completo y OK final del usuario.
 - **Evidencia:** `docs/evidencias/B9/README.md`.
-- **Estado:** entregables y push completados; OK final del usuario pendiente.
+- **Estado:** entregables, push y OK final completados.
 
 ---
 

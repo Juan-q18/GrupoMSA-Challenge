@@ -12,7 +12,6 @@
 - Los archivos son el **JSON crudo** exportado con `opencode export <sessionID>`.
 - Se guardan **completos y sin alteraciones**: no se resumieron, recortaron ni editaron a mano.
 - El JSON crudo es la fuente de verdad. No se generó una versión Markdown.
-- El archivo `02-implementacion-b0-b9.json` se re-exporta al cierre de B9 para incluir el estado final de la sesión; si la sesión se cierra después, debe ejecutarse nuevamente el mismo comando de exportación.
 - No se incluyeron tokens ni credenciales reales. Los emails y datos usados en las pruebas son ficticios.
 
 ## Validación

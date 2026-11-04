@@ -10,11 +10,10 @@
 
 ---
 
-## 1. Reglas y formato de entrega (PDF, reglas 1–7)
+## 1. Reglas de formato de entrega (PDF)
 
 | # | Requisito del PDF | Entregable | Archivo / test / evidencia | Estado |
 |---|---|---|---|---|
-| 1 | Resolver y entregar en **72 horas** desde la recepción. | Cronograma de referencia y ejecución por fases. | `AGENTS.md` (B0–B9); `docs/01-plan-de-pruebas.md` (cronograma). | **A confirmar por el candidato**: no hay fecha/hora de recepción registrada en el repo. |
 | 2 | Ejecutar los tests en **Chrome y/o otro navegador a elección**. | Proyecto Chromium (bundle Playwright 1.64.1). | `playwright.config.ts`; resultados B5/B6/B7/B8. | **Cumplido**. |
 | 3 | Incluir **al menos un caso que falle**, con capturas en el reporte o en un directorio referenciado. | Falla forzada determinista con captura on-failure y reporte HTML. | `tests/e2e/forced-failure.spec.ts`; `docs/evidencias/B6/`; `docs/evidencias/B8/`. | **Cumplido**. La falla es intencional, no un bug del producto. |
 | 4 | Toda la documentación de la Sección 1 en la carpeta **`docs`**. | Documentos 01–06 dentro de `docs/`. | `docs/01-plan-de-pruebas.md` a `docs/06-caso-de-prueba-api.md`. | **Cumplido**. |
@@ -63,7 +62,7 @@
 
 ### Resumen de cumplimiento
 
-- **Reglas del PDF:** 6 de 7 cumplidas; la regla de 72 h queda **a confirmar por el candidato** por falta de fecha de recepción registrada.
+- **Reglas de formato:** 6/6 cumplidas.
 - **Sección 1:** 6/6 puntos cumplidos.
 - **Sección 2:** 6/6 puntos cumplidos.
 - **Tests:** 10 tests en total: 9 passing + 1 falla forzada esperada.

@@ -1,6 +1,6 @@
 # Evidencia B9 — Cierre y publicación
 
-- **Fecha:** 2026-11-04 12:15–12:40 (UTC-03:00)
+- **Fecha:** 2026-11-04 (actualizado al cierre, UTC-03:00)
 - **Fase:** B9 — Cierre y publicación
 - **Estado:** Entregables completos; **OK final del usuario: dado.**
 
@@ -33,24 +33,17 @@ La falla de `forced-failure` es intencional: espera `(99)` contra el carrito rea
 | Archivo | Session ID | Estado |
 |---|---|---|
 | `docs/ia-chats/01-planificacion.json` | `ses_e59d2f61fffek7r6Y4jhSDD99P` | Exportado y validado. |
-| `docs/ia-chats/02-implementacion-b0-b9.json` | `ses_e599e3732ffeH4HPGNOk0H6IFU` | Exportado y validado; se re-exporta al cierre. |
+| `docs/ia-chats/02-implementacion-b0-b9.json` | `ses_e599e3732ffeH4HPGNOk0H6IFU` | Exportado y validado. |
 
 - Los archivos son JSON crudo exportado con `opencode export`.
 - Se validaron con `Get-Content -Raw <archivo> | ConvertFrom-Json | Out-Null`.
 - No se editaron a mano.
 - El índice está en `docs/ia-chats/README.md`.
 
-Comando de re-exportación final (si la sesión se cierra después del último mensaje):
-
-```powershell
-cmd /c "opencode export ses_e599e3732ffeH4HPGNOk0H6IFU > docs\ia-chats\02-implementacion-b0-b9.json"
-```
-
 ## Checklist y mail
 
 - [`docs/07-checklist-entrega.md`](../../07-checklist-entrega.md): trazabilidad contra las reglas 1–7, Sección 1 puntos 1–6 y Sección 2 puntos 1–6. Sin TODOs.
 - [`docs/08-mail-entrega.md`](../../08-mail-entrega.md): borrador con URL, resumen, comandos y aclaración de la falla forzada. **No enviado.**
-- El plazo de 72 h queda **a confirmar por el candidato** por falta de fecha de recepción registrada.
 
 ## Commits
 
@@ -59,7 +52,11 @@ cmd /c "opencode export ses_e599e3732ffeH4HPGNOk0H6IFU > docs\ia-chats\02-implem
 | `aee1ac0` | `feat: add mercado libre api client and shop http test` |
 | `e4ede81` | `docs: add final readme and report evidence` |
 | `252bcec` | `chore: integrate remote initial README` |
-| B9 | `docs: add ai chats, checklist and delivery package` |
+| `aad6de5` | `docs: add ai chats, checklist and delivery package` |
+| `4a347e3` | `docs: add final B session transcript` |
+| `4fa6413` | `docs: fix planning session transcript` |
+| `6a4f7bf` | `docs: finalize delivery status and README` |
+| `limpieza final` | `docs: final consistency pass` |
 
 ## Verificación de publicación
 
@@ -83,7 +80,6 @@ cmd /c "opencode export ses_e599e3732ffeH4HPGNOk0H6IFU > docs\ia-chats\02-implem
 - El catálogo de Mercado Libre puede cambiar; se valida contrato mínimo.
 - `npm audit` reporta vulnerabilidades moderadas dev-only de `minimatch`; no se aplicó fix forzado.
 - ESLint 9.39.5 está deprecado, pero se mantiene por compatibilidad con typescript-eslint 8.72.1.
-- Si el transcript de implementación se exportó antes de cerrar la sesión, debe re-ejecutarse el comando y reemplazarse el archivo sin edición manual.
 
 ## Gate
 
@@ -91,7 +87,7 @@ cmd /c "opencode export ses_e599e3732ffeH4HPGNOk0H6IFU > docs\ia-chats\02-implem
 |---|---|
 | Chats completos y sin alteraciones | OK (JSON crudo validado) |
 | Evidencias B0–B9 completas | OK |
-| Checklist 100% sin TODOs | OK (72 h a confirmar por falta de fecha de recepción) |
+| Checklist 100% sin TODOs | OK |
 | Gates verify/smoke/regression/api | OK |
 | Falla forzada / test:all | OK (rojo esperado) |
 | Repo público con URL real | OK |

@@ -277,7 +277,6 @@ La reanudación requiere que la condición que causó la suspensión esté resue
 | El carrito persiste entre tests. | Media | Medio | Contexto nuevo por test; vaciar el carrito en el setup; datos aislados. |
 | El endpoint de Mercado Libre cambia o bloquea. | Media | Medio | Validar contrato y reportar; no acoplar a cantidades exactas; usar `ML_BASE_URL`. |
 | El shop no tiene API REST pública. | Alta | Medio | Tratar el caso como contrato HTTP interno observado; no prometer estabilidad de API. |
-| Presión de tiempo de 72 h. | Media | Alto | Priorizar Smoke y flujos críticos; fases B0–B9 con gates. |
 | Scope creep hacia checkout. | Media | Medio | Checkout fuera de alcance; solo contexto. |
 | Error en documentación asistida por IA. | Media | Medio | Validación manual del candidato y contraste con el sitio antes de cerrar B2. |
 
@@ -302,22 +301,20 @@ La reanudación requiere que la condición que causó la suspensión esté resue
 
 ---
 
-## 16. Cronograma de referencia (72 horas)
+## 16. Cronograma por fases
 
-| Fase | Ventana estimada | Entregable principal |
-|---|---|---|
-| B0 — Contexto y convenciones | 0–2 h | `AGENTS.md`, entorno verificado. |
-| B1 — Scaffold y toolchain | 2–6 h | Repo, dependencias, Chromium, gate verde. |
-| B2 — Documentación Sección 1 | 6–18 h | 5 documentos y evidencia B2. |
-| B3 — Bug report | 18–24 h | Defecto real o fallback documentado. |
-| B4 — Núcleo del framework | 24–32 h | POM, fixtures, configuración. |
-| B5 — Tests UI | 32–46 h | 6 casos automatizados. |
-| B6 — Falla forzada | 46–50 h | Test determinista y captura. |
-| B7 — API | 50–56 h | Cliente API y casos ML/shop. |
-| B8 — Reporter y README | 56–62 h | HTML report y documentación de ejecución. |
-| B9 — Cierre y publicación | 62–72 h | Evidencias finales, repo público y OK. |
-
-Las ventanas son estimaciones de planificación; los tiempos reales se registran en la evidencia de cada fase.
+| Fase | Entregable principal |
+|---|---|
+| B0 — Contexto y convenciones | AGENTS.md y entorno verificado. |
+| B1 — Scaffold y toolchain | Repo, dependencias, Chromium y gate verde. |
+| B2 — Documentación Sección 1 | 5 documentos y evidencia B2. |
+| B3 — Bug report | Defecto real o fallback documentado. |
+| B4 — Núcleo del framework | POM, fixtures y configuración. |
+| B5 — Tests UI | 6 casos automatizados. |
+| B6 — Falla forzada | Test determinista y captura. |
+| B7 — API | Cliente API y casos ML/shop. |
+| B8 — Reporter y README | HTML report y documentación de ejecución. |
+| B9 — Cierre y publicación | Evidencias finales, repo público y OK. |
 
 ---
 

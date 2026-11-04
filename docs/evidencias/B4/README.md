@@ -4,6 +4,8 @@
 - **Fase:** B4 — Núcleo del framework
 - **Estado del gate:** OK
 
+> Evidencia histórica de B4; los métodos se validaron en B5 y las capturas on-failure en B6.
+
 ## Objetivo
 
 Dejar lista la capa tipada de configuración, Page Objects, componente de header, factory de usuarios y fixtures, con un único sanity test de navegación. Sin tests de negocio de Registro/Login/Carrito y sin clientes de API.
@@ -97,10 +99,10 @@ El test:
 
 ## Limitaciones conocidas
 
-- Los métodos de `LoginPage`, `RegisterPage` y `CartPage` no se ejercitan en B4 porque no se escriben tests de negocio; se validarán en B5.
-- `HeaderComponent.getAuthenticatedEmail()` e `isLoggedIn()` no se ejecutan en B4 porque no se crean cuentas; se validarán en B5.
-- El sanity test no genera capturas porque pasa; las capturas on-failure se verifican en B6.
-- No se ejecutó `npm.cmd run test:smoke` ni `test:regression` porque todavía no existen tests con esos tags.
+- Los métodos de `LoginPage`, `RegisterPage` y `CartPage` no se ejercitaron en B4; se validaron en B5.
+- `HeaderComponent.getAuthenticatedEmail()` e `isLoggedIn()` no se ejecutaron en B4; se validaron en B5.
+- El sanity test no genera capturas porque pasa; las capturas on-failure se verificaron en B6.
+- No se ejecutaron test:smoke/regression en B4; se ejecutaron en B5 (3/6).
 
 ## Gate de la fase
 

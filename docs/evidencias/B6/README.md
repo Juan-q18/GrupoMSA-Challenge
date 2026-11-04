@@ -5,6 +5,8 @@
 - **Test ID:** `[AUTO-FF-01] @forced-failure`
 - **Estado del gate:** OK
 
+> Evidencia histórica de B6; los tests de API se completaron en B7.
+
 ## Objetivo
 
 Agregar exactamente un test determinista que falle de verdad para verificar la captura automática on-failure, el HTML Reporter y la exclusión de la falla forzada de la suite por defecto.

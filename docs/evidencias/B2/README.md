@@ -4,6 +4,8 @@
 - **Fase:** B2 — Documentación Sección 1
 - **Estado del gate:** OK
 
+> Evidencia histórica de B2. El estado final de los casos está en B5/B9.
+
 ## Objetivo
 
 Completar los cinco documentos de la Sección 1, validar manualmente contra el sitio los casos indicados y registrar la evidencia sin inventar resultados. No se escribieron tests ni se ejecutó la suite (todavía no existen tests).
@@ -40,14 +42,14 @@ Resultado observado:
 - Se mostró `No customer account found`.
 - El header no mostró `Log out`; no se inició sesión.
 
-### CP-LOGIN-01 y CP-LOGIN-02 — Pendientes
+### CP-LOGIN-01 y CP-LOGIN-02 — Pendientes en B2 (validadas en B5)
 
-No se ejecutaron porque requieren una cuenta registrada. Quedan pendientes de validación con una cuenta real de prueba en B3/B4:
+Quedaron pendientes en B2 por falta de cuenta registrada; se validaron en B5 con AUTO-LOGIN-01/02. Ver docs/evidencias/B5/README.md.
 
 - `CP-LOGIN-01`: login válido.
-- `CP-LOGIN-02`: contraseña incorrecta; el mensaje `The credentials provided are incorrect` debe confirmarse con la cuenta registrada.
+- `CP-LOGIN-02`: contraseña incorrecta; el mensaje `The credentials provided are incorrect` se confirmó en B5.
 
-No se declaran resultados de estos dos casos.
+Los resultados finales están en B5.
 
 ### CP-CART-01 — Agregar producto — Validado
 
@@ -182,11 +184,11 @@ Verificaciones documentales:
 
 ## Limitaciones y problemas conocidos
 
-- `CP-LOGIN-01` y `CP-LOGIN-02` quedan pendientes de una cuenta registrada; se validan en B3/B4.
+- `CP-LOGIN-01` y `CP-LOGIN-02` quedaron pendientes en B2; se validaron en B5 con AUTO-LOGIN-01/02.
 - Los valores `1590.00` y `3180.00` son observaciones de B2; la automatización debe leer el precio de la fila y calcular el total, sin hardcodear.
 - La API de Mercado Libre puede cambiar su catálogo; las assertions se limitan a la regla `departments` y a la estructura mínima.
 - El endpoint de add-to-cart es interno y no tiene contrato público; una falla debe reportarse como regresión del contrato observado.
-- No se generaron capturas en B2; la evidencia se registra con los textos y valores observados.
+- No se generaron capturas en B2; las capturas on-failure y del reporte están en B6/B8.
 
 ## Commit
 

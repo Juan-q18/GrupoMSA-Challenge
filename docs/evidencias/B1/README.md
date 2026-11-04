@@ -120,7 +120,7 @@ src/utils/        tests/e2e/         tests/api/
 docs/             docs/evidencias/B1/  docs/ia-chats/
 ```
 
-Se usan archivos `.gitkeep` en las carpetas todavía vacías. `.env` se creó desde `.env.example` y está gitignored; `node_modules/`, `test-results/` y `playwright-report/` también están ignorados.
+Se usaron .gitkeep en B1 y se removieron en la limpieza final cuando las carpetas tuvieron archivos. `.env` se creó desde `.env.example` y está gitignored; `node_modules/`, `test-results/` y `playwright-report/` también están ignorados.
 
 ## Configuración aplicada
 
@@ -133,7 +133,7 @@ Se usan archivos `.gitkeep` en las carpetas todavía vacías. `.env` se creó de
 - `npm.cmd audit` reporta **11 vulnerabilidades moderadas** transitivas en `minimatch` dentro del toolchain de ESLint/typescript-eslint. Son dependencias de desarrollo; no se aplicó `npm audit fix --force` porque propone un downgrade breaking a `eslint@4.0.0`.
 - npm advierte que `eslint@9.39.5` ya no tiene soporte (existe ESLint 10). Se mantiene la versión fijada por compatibilidad con `typescript-eslint@8.72.1` y por decisión de AGENTS.md.
 - `npx` (PowerShell) está bloqueado por ExecutionPolicy; usar `npx.cmd` o scripts de npm.
-- No hay tests todavía: la suite por defecto se ejecutará a partir de B5.
+- No había tests todavía: el sanity de navegación se agrega en B4 y los 6 tests de negocio en B5.
 
 ## Commit
 

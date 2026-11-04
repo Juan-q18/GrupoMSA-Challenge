@@ -4,6 +4,8 @@
 - **Fase:** B5 — Tests UI
 - **Estado del gate:** OK
 
+> Evidencia histórica de B5; la API se validó en B7 y la falla forzada en B6.
+
 ## Objetivo
 
 Automatizar los 6 casos de negocio de Registro, Login y Carrito definidos en `docs/02-casos-de-prueba.md`, con tags `@smoke`/`@regression`, assertions de negocio, datos únicos y sin esperas fijas.
@@ -148,8 +150,8 @@ Resultado: `Total: 7 tests in 4 files`.
 
 - Los tests de Login crean cuentas de prueba únicas (3 cuentas en total durante la suite). Es el comportamiento esperado del fixture `registeredUser`; no se crearon órdenes.
 - La suite depende de que el sitio demo esté disponible; las aserciones esperan el estado real del sitio.
-- No se ejecutaron los tests de API (B7) ni la falla forzada (B6).
-- No se generaron capturas en B5 porque todos los tests pasaron; las capturas on-failure se validan en B6.
+- En B5 no se ejecutaron; se completaron en B6 (falla forzada) y B7 (API).
+- No se generaron capturas en B5 porque todos los tests pasaron; las capturas on-failure se validaron en B6.
 
 ## Gate de la fase
 
