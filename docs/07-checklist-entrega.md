@@ -4,7 +4,7 @@
 **Documento:** `docs/07-checklist-entrega.md`
 **Versión:** 1.0
 **Fecha:** 2026-11-04
-**Estado:** Entregables técnicos completos; OK final del usuario pendiente.
+**Estado:** Entregables técnicos completos; OK final del usuario: dado.
 
 > Este documento mapea cada requisito del PDF del challenge con su entregable, archivo/test y evidencia. No contiene marcadores de trabajo pendiente.
 
@@ -18,7 +18,7 @@
 | 2 | Ejecutar los tests en **Chrome y/o otro navegador a elección**. | Proyecto Chromium (bundle Playwright 1.64.1). | `playwright.config.ts`; resultados B5/B6/B7/B8. | **Cumplido**. |
 | 3 | Incluir **al menos un caso que falle**, con capturas en el reporte o en un directorio referenciado. | Falla forzada determinista con captura on-failure y reporte HTML. | `tests/e2e/forced-failure.spec.ts`; `docs/evidencias/B6/`; `docs/evidencias/B8/`. | **Cumplido**. La falla es intencional, no un bug del producto. |
 | 4 | Toda la documentación de la Sección 1 en la carpeta **`docs`**. | Documentos 01–06 dentro de `docs/`. | `docs/01-plan-de-pruebas.md` a `docs/06-caso-de-prueba-api.md`. | **Cumplido**. |
-| 5 | Chats de IA completos y sin alteraciones. | Exportaciones JSON crudas de planificación e implementación. | `docs/ia-chats/01-planificacion.json`, `docs/ia-chats/02-implementacion-b0-b9.json`, índice `docs/ia-chats/README.md`. | **Cumplido**; el archivo 02 se re-exporta al cierre de B9. |
+| 5 | Chats de IA completos y sin alteraciones. | Exportaciones JSON crudas de planificación e implementación. | `docs/ia-chats/01-planificacion.json`, `docs/ia-chats/02-implementacion-b0-b9.json`, índice `docs/ia-chats/README.md`. | **Cumplido: archivos incluidos en `docs/ia-chats/`.** |
 | 6 | Entregar mediante **repositorio público de GitHub** y compartir el enlace. | Repositorio público con el framework y la documentación. | https://github.com/Juan-q18/GrupoMSA-Challenge | **Cumplido**; push final en `main` durante B9. |
 | 7 | README con instrucciones completas de instalación, dependencias y ejecución. | README final cross-platform. | [`../README.md`](../README.md) | **Cumplido**. |
 
@@ -69,4 +69,4 @@
 - **Tests:** 10 tests en total: 9 passing + 1 falla forzada esperada.
 - **Evidencias:** B0–B9 completas.
 - **Chats:** exportados completos y sin edición manual.
-- **Pendiente:** OK final del usuario y re-exportación del transcript de implementación después del último mensaje de la sesión.
+- **Cierre:** OK final del usuario dado.

@@ -2,7 +2,7 @@
 
 - **Fecha:** 2026-11-04 12:15–12:40 (UTC-03:00)
 - **Fase:** B9 — Cierre y publicación
-- **Estado:** Entregables completos; **OK final del usuario pendiente**.
+- **Estado:** Entregables completos; **OK final del usuario: dado.**
 
 ## Repositorio
 
@@ -71,7 +71,7 @@ cmd /c "opencode export ses_e599e3732ffeH4HPGNOk0H6IFU > docs\ia-chats\02-implem
 - [x] Chats JSON válidos.
 - [x] Sin `.env`, `test-results/` ni `playwright-report/` versionados.
 - [x] Push en `main` sin force-push.
-- [ ] OK final del usuario.
+- [x] OK final del usuario.
 
 ## Problemas conocidos
 
@@ -98,6 +98,6 @@ cmd /c "opencode export ses_e599e3732ffeH4HPGNOk0H6IFU > docs\ia-chats\02-implem
 | Working tree limpio y push en main | OK |
 | Sin secretos/artefactos versionados | OK |
 | Mail draft listo | OK, no enviado |
-| OK final del usuario | **Pendiente** |
+| OK final del usuario | **Dado** |
 
-**Conclusión:** la entrega técnica está completa y publicada. El challenge no se da por cerrado hasta recibir el OK final del usuario.
+**Conclusión:** entrega completa, publicada y con OK final.

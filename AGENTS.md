@@ -509,4 +509,4 @@ El challenge está terminado cuando:
 - [x] `docs/ia-chats/` contiene todos los chats completos y sin alteraciones.
 - [x] El README permite instalar y ejecutar el proyecto desde cero.
 - [x] El repositorio es público y el enlace fue compartido.
-- [ ] El usuario dio el OK final.
+- [x] El usuario dio el OK final.

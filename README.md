@@ -8,10 +8,8 @@ El repositorio reúne:
 - el framework de automatización de la **Sección 2** (Page Objects, fixtures, datos de prueba, reporter HTML y módulo de API);
 - la evidencia de ejecución de cada fase, incluidas capturas de fallas y del HTML Reporter.
 
-**Target UI:** [https://demowebshop.tricentis.com](https://demowebshop.tricentis.com)
-**Target API Mercado Libre:** `https://www.mercadolibre.com.ar/menu/departments`
-
-> **Estado:** B9 completado (cierre, chats de IA y publicación). El challenge queda a la espera del OK final del usuario.
+- **Target UI:** [https://demowebshop.tricentis.com](https://demowebshop.tricentis.com)
+- **Target API Mercado Libre:** [https://www.mercadolibre.com.ar/menu/departments](https://www.mercadolibre.com.ar/menu/departments)
 
 ---
 
@@ -91,12 +89,6 @@ cp .env.example .env
 ```
 
 > El repositorio público está en https://github.com/Juan-q18/GrupoMSA-Challenge. Para trabajar localmente también está en `B:\GrupoMSA-Challenge`.
-
-Si se quiere ejecutar Firefox como navegador opcional:
-
-```powershell
-npm.cmd exec playwright install firefox
-```
 
 ---
 
