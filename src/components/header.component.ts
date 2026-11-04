@@ -31,6 +31,10 @@ export class HeaderComponent {
     await this.cartLink.click();
   }
 
+  async logout(): Promise<void> {
+    await this.logoutLink.click();
+  }
+
   async getCartCount(): Promise<number> {
     const text = (await this.cartQuantity.innerText()).trim();
     const match = /^\((\d+)\)$/.exec(text);

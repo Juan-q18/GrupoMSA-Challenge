@@ -141,12 +141,14 @@ El PDF menciona `http://demowebshop.tricentis.com`; se usa **HTTPS** como URL ca
 │   ├── config/
 │   │   └── env.ts                    # lectura y validación de variables de entorno
 │   ├── data/
-│   │   └── user.factory.ts           # datos únicos por ejecución
+│   │   ├── products.ts
+│   │   └── user.factory.ts
 │   ├── pages/
 │   │   ├── base.page.ts
 │   │   ├── home.page.ts
-│   │   ├── register.page.ts
 │   │   ├── login.page.ts
+│   │   ├── product.page.ts
+│   │   ├── register.page.ts
 │   │   └── cart.page.ts
 │   ├── components/
 │   │   └── header.component.ts
@@ -157,11 +159,14 @@ El PDF menciona `http://demowebshop.tricentis.com`; se usa **HTTPS** como URL ca
 │   ├── fixtures/
 │   │   └── test.fixtures.ts
 │   └── utils/
+│       ├── price.ts
+│       └── random.ts
 ├── tests/
 │   ├── e2e/
 │   │   ├── register.spec.ts
 │   │   ├── login.spec.ts
 │   │   ├── cart.spec.ts
+│   │   ├── navigation.spec.ts
 │   │   └── forced-failure.spec.ts
 │   └── api/
 │       ├── mercadolibre.spec.ts
@@ -438,12 +443,13 @@ Reglas:
 - **Gate:** `typecheck`, `lint`, `test` (sanity) y `--list` (1 test) verdes; configuración de capturas revisada; evidencia en `docs/evidencias/B4/`.
 - **Evidencia:** `docs/evidencias/B4/README.md`.
 
-### B5 — Tests UI · [ ]
+### B5 — Tests UI · [x]
 
 - 2 casos de Registro, 2 de Login y 2 de Carrito.
 - Tags `@smoke`/`@regression` e IDs `[AUTO-REG-*]`, `[AUTO-LOGIN-*]`, `[AUTO-CART-*]`.
 - Assertions de negocio sobre mensajes, usuario autenticado, producto, cantidad y total.
 - **Gate:** suites UI, Smoke y Regresión verdes; evidencia en `docs/evidencias/B5/`.
+- **Evidencia:** `docs/evidencias/B5/README.md`.
 
 ### B6 — Falla forzada y capturas · [ ]
 

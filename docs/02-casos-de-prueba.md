@@ -51,8 +51,8 @@
 | **Pasos** | 1. Crear o preparar la cuenta. 2. Navegar a `/login`. 3. Completar **Email** y **Password**. 4. Hacer clic en **Log in**. 5. Verificar la redirección y el header. |
 | **Resultado esperado** | Redirección a la página de inicio; el header muestra el email autenticado; la opción **Log out** está visible. |
 | **Automatización** | `AUTO-LOGIN-01` — `[AUTO-LOGIN-01] @smoke @regression` |
-| **Evidencia** | `docs/evidencias/B5/README.md` (B5). En B2 queda pendiente por falta de cuenta registrada. |
-| **Estado B2** | **Pendiente de cuenta registrada**; se valida en B5. No se marca como aprobado en esta fase. |
+| **Evidencia** | `docs/evidencias/B5/README.md` (B5). |
+| **Estado B5** | **Validado en B5** con `AUTO-LOGIN-01`: header con el email y **Log out** visible. |
 
 ```gherkin
 # language: es
@@ -91,8 +91,8 @@ Característica: Login de usuarios
 | **Pasos** | 1. Navegar a `/login`. 2. Ingresar el email registrado. 3. Ingresar una contraseña incorrecta. 4. Hacer clic en **Log in**. 5. Verificar que no se inicia sesión y que aparecen los mensajes. |
 | **Resultado esperado** | Permanece en `/login`; se muestra `Login was unsuccessful. Please correct the errors and try again.`; se muestra `The credentials provided are incorrect`; el header no muestra al usuario autenticado. |
 | **Automatización** | `AUTO-LOGIN-02` — `[AUTO-LOGIN-02] @regression` |
-| **Evidencia** | `docs/evidencias/B5/README.md` (B5). En B2 queda pendiente por falta de cuenta registrada. |
-| **Estado B2** | **Pendiente de cuenta registrada**; el texto exacto `The credentials provided are incorrect` se confirma en B5. |
+| **Evidencia** | `docs/evidencias/B5/README.md` (B5). |
+| **Estado B5** | **Validado en B5** con `AUTO-LOGIN-02`; el texto `The credentials provided are incorrect` es el observado. |
 
 ```gherkin
 # language: es
@@ -102,7 +102,7 @@ Característica: Login de usuarios
   Quiero iniciar sesión
   Para acceder a mi cuenta
 
-  # El texto "The credentials provided are incorrect" se confirma con una cuenta registrada en B5.
+  # El texto "The credentials provided are incorrect" se confirmó con una cuenta registrada en B5.
   @CP-LOGIN-02 @regression @prioridad-alta
   Escenario: Login rechazado con contraseña incorrecta
     Dado que existe un usuario registrado
@@ -296,12 +296,12 @@ El PDF exige **3 casos manuales de Login** y **3 de Carrito**, no casos manuales
 | **Precondiciones** | El sitio está disponible; el email no existe. | El sitio está disponible; no se requiere cuenta. |
 | **Datos** | Email único `qa.<timestamp>.<random>@example.com`; nombre y apellido de prueba; contraseña de prueba. | Campos vacíos, email con formato inválido y contraseñas que no coinciden. |
 | **Pasos** | 1. Ir a `/register`. 2. Completar datos. 3. Registrar. 4. Verificar mensaje y header. | 1. Ir a `/register`. 2. Enviar vacío. 3. Completar con email inválido y contraseñas distintas. 4. Verificar mensajes. |
-| **Resultado esperado** | Mensaje de registro exitoso; usuario autenticado en el header; opción **Log out** visible. | `First name is required.`, `Last name is required.`, `Email is required.`, `Password is required.`, `Wrong email`, `The password and confirmation password do not match.` |
+| **Resultado esperado** | Mensaje `Your registration completed`; usuario autenticado en el header; opción **Log out** visible. | `First name is required.`, `Last name is required.`, `Email is required.`, `Password is required.`, `Wrong email`, `The password and confirmation password do not match.` |
 | **Tags** | `@smoke @regression` | `@regression` |
 | **Evidencia** | `docs/evidencias/B5/README.md` (B5) | `docs/evidencias/B5/README.md` (B5) |
-| **Estado B2** | Diseñado; no ejecutado. | Mensajes observados en B2; no se creó una cuenta. |
+| **Estado B5** | **Ejecutado en B5**: registro exitoso y header autenticado. | **Ejecutado en B5**: validaciones negativas sin llegar a `/registerresult`. |
 
-**Nota:** en la validación B2 se enviaron formularios inválidos y se observaron los mensajes listados. No se creó una cuenta de prueba en esta fase; el alta exitosa se ejecutará en B5. El mensaje de confirmación de contraseña vacía observado fue `Password is required.` para ambos campos.
+**Nota:** en B2 se observaron los mensajes de validación con formularios inválidos. En B5 se ejecutó el alta exitosa con email único y los dos casos de Registro quedaron automatizados en `tests/e2e/register.spec.ts`.
 
 ---
 
@@ -309,8 +309,8 @@ El PDF exige **3 casos manuales de Login** y **3 de Carrito**, no casos manuales
 
 | Caso | Tipo | Test automatizado | Tags | Evidencia |
 |---|---|---|---|---|
-| `CP-LOGIN-01` | Manual + automatizado | `AUTO-LOGIN-01` | `@smoke @regression` | B5 (`docs/evidencias/B5/README.md`); B2 pendiente de cuenta |
-| `CP-LOGIN-02` | Manual + automatizado | `AUTO-LOGIN-02` | `@regression` | B5 (`docs/evidencias/B5/README.md`); B2 pendiente de cuenta |
+| `CP-LOGIN-01` | Manual + automatizado | `AUTO-LOGIN-01` | `@smoke @regression` | B5 (`docs/evidencias/B5/README.md`) |
+| `CP-LOGIN-02` | Manual + automatizado | `AUTO-LOGIN-02` | `@regression` | B5 (`docs/evidencias/B5/README.md`) |
 | `CP-LOGIN-03` | Manual | — | `@regression` | B2 (`docs/evidencias/B2/README.md`) |
 | `CP-CART-01` | Manual + automatizado | `AUTO-CART-01` | `@smoke @regression` | B2 validado; B5 (`docs/evidencias/B5/README.md`) |
 | `CP-CART-02` | Manual + automatizado | `AUTO-CART-02` | `@regression` | B2 validado; B5 (`docs/evidencias/B5/README.md`) |
@@ -324,20 +324,20 @@ La regla de suites se detalla en `docs/03-estrategia-suites.md`: todo caso Smoke
 
 ---
 
-## 6. Resumen de validación B2
+## 6. Resumen de validación (B2/B5)
 
 | Caso | Estado | Resultado observado |
 |---|---|---|
-| `CP-LOGIN-01` | Pendiente de cuenta registrada | No ejecutado; se valida en B5. |
-| `CP-LOGIN-02` | Pendiente de cuenta registrada | No ejecutado; se confirma el mensaje específico en B5. |
-| `CP-LOGIN-03` | Validado | Resumen de error y `No customer account found`; sin sesión. |
-| `CP-CART-01` | Validado | Banner, contador `(1)`, producto, precio, cantidad y totales. |
-| `CP-CART-02` | Validado | Cantidad `2`, contador `(2)`, totales `3180.00`. |
-| `CP-CART-03` | Validado | Carrito vacío, mensaje de vacío y contador `(0)`. |
-| `AUTO-REG-01` | Diseñado | Se ejecuta en B5. |
-| `AUTO-REG-02` | Diseñado | Mensajes de validación observados en B2. |
+| `CP-LOGIN-01` | Validado en B5 | Login exitoso; header con el email y **Log out** visible; URL fuera de `/login`. |
+| `CP-LOGIN-02` | Validado en B5 | Permanece en `/login`; `Login was unsuccessful. Please correct the errors and try again.` + `The credentials provided are incorrect`; sin sesión. |
+| `CP-LOGIN-03` | Validado en B2 | Resumen de error y `No customer account found`; sin sesión. |
+| `CP-CART-01` | Validado en B2 y B5 | Banner, contador `(1)`, producto, cantidad y totales calculados desde el precio de la fila. |
+| `CP-CART-02` | Validado en B2 y B5 | Cantidad `2`, contador `(2)` y totales recalculados como `precio unitario × 2`. |
+| `CP-CART-03` | Validado en B2 | Carrito vacío, mensaje de vacío y contador `(0)`. |
+| `AUTO-REG-01` | Ejecutado en B5 | Mensaje `Your registration completed`; header con email y **Log out**. |
+| `AUTO-REG-02` | Ejecutado en B5 | Campos requeridos, `Wrong email` y confirmación distinta; no llegó a `/registerresult`. |
 
-La evidencia completa, con comandos y textos observados, está en [`docs/evidencias/B2/README.md`](evidencias/B2/README.md).
+La evidencia de B5 está en [`docs/evidencias/B5/README.md`](evidencias/B5/README.md); la validación manual de B2, en [`docs/evidencias/B2/README.md`](evidencias/B2/README.md).
 
 ---
 

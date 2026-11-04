@@ -1,4 +1,5 @@
 import type { Locator, Page } from '@playwright/test';
+import { parsePrice } from '../utils/price';
 import { BasePage } from './base.page';
 
 export class CartPage extends BasePage {
@@ -34,6 +35,28 @@ export class CartPage extends BasePage {
   async getSubTotal(): Promise<string> {
     const row = this.page.locator('.cart-total tr').filter({ hasText: 'Sub-Total:' });
     return this.getSummaryValue(row);
+  }
+
+  async getProductPrice(productName: string): Promise<number> {
+    const row = this.getProductRow(productName);
+    return parsePrice(await row.locator('.product-unit-price').innerText());
+  }
+
+  async getLineTotal(productName: string): Promise<number> {
+    const row = this.getProductRow(productName);
+    return parsePrice(await row.locator('.product-subtotal').innerText());
+  }
+
+  async getQuantity(productName: string): Promise<number> {
+    const row = this.getProductRow(productName);
+    const value = await row.locator('input.qty-input').inputValue();
+    const quantity = Number.parseInt(value, 10);
+
+    if (!Number.isInteger(quantity) || quantity < 0) {
+      throw new Error(`Unexpected quantity "${value}" for product "${productName}".`);
+    }
+
+    return quantity;
   }
 
   async getTotal(): Promise<string> {

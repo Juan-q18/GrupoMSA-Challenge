@@ -10,6 +10,7 @@ export class RegisterPage extends BasePage {
   readonly confirmPasswordInput: Locator;
   readonly registerButton: Locator;
   readonly validationErrors: Locator;
+  readonly resultMessage: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -20,6 +21,7 @@ export class RegisterPage extends BasePage {
     this.confirmPasswordInput = page.getByLabel('Confirm password:');
     this.registerButton = page.getByRole('button', { name: 'Register' });
     this.validationErrors = page.locator('.field-validation-error');
+    this.resultMessage = page.locator('.result');
   }
 
   async open(): Promise<void> {
@@ -38,5 +40,9 @@ export class RegisterPage extends BasePage {
   async getValidationMessages(): Promise<string[]> {
     const messages = await this.validationErrors.allInnerTexts();
     return messages.map((message) => message.trim());
+  }
+
+  async getResultMessage(): Promise<string> {
+    return (await this.resultMessage.innerText()).trim();
   }
 }
