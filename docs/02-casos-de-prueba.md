@@ -52,7 +52,7 @@
 | **Resultado esperado** | Redirección a la página de inicio; el header muestra el email autenticado; la opción **Log out** está visible. |
 | **Automatización** | `AUTO-LOGIN-01` — `[AUTO-LOGIN-01] @smoke @regression` |
 | **Evidencia** | `docs/evidencias/B5/README.md` (B5). En B2 queda pendiente por falta de cuenta registrada. |
-| **Estado B2** | **Pendiente de cuenta registrada**; se valida en B3/B4. No se marca como aprobado en esta fase. |
+| **Estado B2** | **Pendiente de cuenta registrada**; se valida en B5. No se marca como aprobado en esta fase. |
 
 ```gherkin
 # language: es
@@ -92,7 +92,7 @@ Característica: Login de usuarios
 | **Resultado esperado** | Permanece en `/login`; se muestra `Login was unsuccessful. Please correct the errors and try again.`; se muestra `The credentials provided are incorrect`; el header no muestra al usuario autenticado. |
 | **Automatización** | `AUTO-LOGIN-02` — `[AUTO-LOGIN-02] @regression` |
 | **Evidencia** | `docs/evidencias/B5/README.md` (B5). En B2 queda pendiente por falta de cuenta registrada. |
-| **Estado B2** | **Pendiente de cuenta registrada**; el texto exacto `The credentials provided are incorrect` se confirma en B3/B4. |
+| **Estado B2** | **Pendiente de cuenta registrada**; el texto exacto `The credentials provided are incorrect` se confirma en B5. |
 
 ```gherkin
 # language: es
@@ -102,7 +102,7 @@ Característica: Login de usuarios
   Quiero iniciar sesión
   Para acceder a mi cuenta
 
-  # El texto "The credentials provided are incorrect" se confirma con una cuenta registrada en B3/B4.
+  # El texto "The credentials provided are incorrect" se confirma con una cuenta registrada en B5.
   @CP-LOGIN-02 @regression @prioridad-alta
   Escenario: Login rechazado con contraseña incorrecta
     Dado que existe un usuario registrado
@@ -328,8 +328,8 @@ La regla de suites se detalla en `docs/03-estrategia-suites.md`: todo caso Smoke
 
 | Caso | Estado | Resultado observado |
 |---|---|---|
-| `CP-LOGIN-01` | Pendiente de cuenta registrada | No ejecutado; se valida en B3/B4. |
-| `CP-LOGIN-02` | Pendiente de cuenta registrada | No ejecutado; se confirma el mensaje específico en B3/B4. |
+| `CP-LOGIN-01` | Pendiente de cuenta registrada | No ejecutado; se valida en B5. |
+| `CP-LOGIN-02` | Pendiente de cuenta registrada | No ejecutado; se confirma el mensaje específico en B5. |
 | `CP-LOGIN-03` | Validado | Resumen de error y `No customer account found`; sin sesión. |
 | `CP-CART-01` | Validado | Banner, contador `(1)`, producto, precio, cantidad y totales. |
 | `CP-CART-02` | Validado | Cantidad `2`, contador `(2)`, totales `3180.00`. |

@@ -20,6 +20,7 @@ Las evidencias por fase se registran en `docs/evidencias/Bn/README.md`, con coma
 - [B1 — Scaffold del repositorio y toolchain](evidencias/B1/README.md)
 - [B2 — Documentación Sección 1](evidencias/B2/README.md)
 - [B3 — Bug report BUG-001](evidencias/B3/README.md)
+- [B4 — Núcleo del framework](evidencias/B4/README.md)
 
 ## Autoría y validación
 

@@ -207,4 +207,4 @@ Estos hallazgos no se incluyen como defectos formales en BUG-001 y no tienen sev
 | Evidencia | `docs/evidencias/B3/README.md` |
 | Capturas | `docs/evidencias/B3/*.png` |
 | Fase | B3 — Bug report |
-| Fecha de cierre | Pendiente de aprobación del usuario |
+| Fecha de cierre de la fase B3 | 2026-11-04 (aprobado; BUG-001 sigue Abierto) |

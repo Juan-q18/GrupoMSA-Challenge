@@ -430,12 +430,13 @@ Reglas:
 - **Gate:** bug reproducible con evidencia, o fallback documentado.
 - **Evidencia:** `docs/evidencias/B3/README.md`.
 
-### B4 — Núcleo del framework · [ ]
+### B4 — Núcleo del framework · [x]
 
 - `BasePage`, page objects, `HeaderComponent`, fixtures, config de entorno, factory de usuarios.
 - Configurar screenshots/trace/video on-failure y HTML Reporter.
 - Definir política de selectores y helpers de espera.
-- **Gate:** `typecheck` + `lint` verdes; configuración de capturas revisada; evidencia en `docs/evidencias/B4/`.
+- **Gate:** `typecheck`, `lint`, `test` (sanity) y `--list` (1 test) verdes; configuración de capturas revisada; evidencia en `docs/evidencias/B4/`.
+- **Evidencia:** `docs/evidencias/B4/README.md`.
 
 ### B5 — Tests UI · [ ]
 
