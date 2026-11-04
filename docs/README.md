@@ -13,7 +13,6 @@
 | [`05-proceso-pruebas-api.md`](05-proceso-pruebas-api.md) | Proceso de pruebas de API de identificación a ejecución. | Completado (B2) |
 | [`06-caso-de-prueba-api.md`](06-caso-de-prueba-api.md) | Casos API-ML-01 y API-SHOP-01, implementados en B7. | Implementado en B7 |
 | [`07-checklist-entrega.md`](07-checklist-entrega.md) | Trazabilidad completa contra las reglas 1–7, Sección 1 y Sección 2 del PDF. | Completado (B9) |
-| [`08-mail-entrega.md`](08-mail-entrega.md) | Borrador del mail de entrega; no enviado. | Completado (B9) |
 
 ## Evidencias por fase
 

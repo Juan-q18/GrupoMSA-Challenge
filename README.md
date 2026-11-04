@@ -245,7 +245,6 @@ La falla forzada se excluye de `test` y de `test:regression` con `--grep-invert 
 | [`docs/05-proceso-pruebas-api.md`](docs/05-proceso-pruebas-api.md) | Proceso de pruebas de API de identificación a reporte. |
 | [`docs/06-caso-de-prueba-api.md`](docs/06-caso-de-prueba-api.md) | Casos `API-ML-01` y `API-SHOP-01`, implementados en B7. |
 | [`docs/07-checklist-entrega.md`](docs/07-checklist-entrega.md) | Trazabilidad completa contra el PDF y estado de entrega. |
-| [`docs/08-mail-entrega.md`](docs/08-mail-entrega.md) | Borrador del mail de entrega; no enviado. |
 
 ### 9.2 Evidencias por fase
 

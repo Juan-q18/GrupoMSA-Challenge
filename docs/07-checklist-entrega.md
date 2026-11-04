@@ -57,7 +57,7 @@
 | Chats de IA | [`ia-chats/README.md`](ia-chats/README.md) y los dos JSON crudos | **Exportados**. |
 | HTML Reporter | `playwright-report/index.html`; capturas B8 | **Generado y capturado**. |
 | README final | [`../README.md`](../README.md) | **Completo, con URL pública y B9**. |
-| Mail de entrega | [`08-mail-entrega.md`](08-mail-entrega.md) | **Borrador listo; no enviado**. |
+| Notificación por mail | — | Fuera del repo; la envía el candidato. |
 | Repositorio público | https://github.com/Juan-q18/GrupoMSA-Challenge | **Público**. |
 
 ### Resumen de cumplimiento

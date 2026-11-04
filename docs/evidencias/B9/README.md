@@ -40,10 +40,9 @@ La falla de `forced-failure` es intencional: espera `(99)` contra el carrito rea
 - No se editaron a mano.
 - El índice está en `docs/ia-chats/README.md`.
 
-## Checklist y mail
+## Checklist
 
 - [`docs/07-checklist-entrega.md`](../../07-checklist-entrega.md): trazabilidad contra las reglas 1–7, Sección 1 puntos 1–6 y Sección 2 puntos 1–6. Sin TODOs.
-- [`docs/08-mail-entrega.md`](../../08-mail-entrega.md): borrador con URL, resumen, comandos y aclaración de la falla forzada. **No enviado.**
 
 ## Commits
 
@@ -93,7 +92,7 @@ La falla de `forced-failure` es intencional: espera `(99)` contra el carrito rea
 | Repo público con URL real | OK |
 | Working tree limpio y push en main | OK |
 | Sin secretos/artefactos versionados | OK |
-| Mail draft listo | OK, no enviado |
+| Notificación por mail | Fuera del repo; la envía el candidato |
 | OK final del usuario | **Dado** |
 
 **Conclusión:** entrega completa, publicada y con OK final.

@@ -131,7 +131,6 @@ El PDF menciona `http://demowebshop.tricentis.com`; se usa **HTTPS** como URL ca
 │   ├── 05-proceso-pruebas-api.md     # Sección 1, punto 5
 │   ├── 06-caso-de-prueba-api.md      # Sección 1, punto 6
 │   ├── 07-checklist-entrega.md       # Checklist de entrega (PDF)
-│   ├── 08-mail-entrega.md            # Borrador del mail de entrega
 │   ├── evidencias/
 │   │   ├── B0/
 │   │   ├── B1/
