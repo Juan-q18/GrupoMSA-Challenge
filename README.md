@@ -2,7 +2,7 @@
 
 Framework de automatización E2E y de API para [Tricentis Demo Web Shop](https://demowebshop.tricentis.com), desarrollado con **Playwright + TypeScript** como parte del challenge técnico de QA Manual con Automation.
 
-> **Estado:** B1 completado (scaffold y toolchain). Los tests y la documentación de la Sección 1 se incorporan en las fases siguientes.
+> **Estado:** B2 completado (documentación de la Sección 1). El bug report, el framework, los tests y el reporter se incorporan en las fases siguientes.
 
 ## Stack
 
@@ -64,12 +64,19 @@ tests/api/             Tests de API
 ## Documentación
 
 - [Índice de documentación](docs/README.md)
+- [Plan de pruebas](docs/01-plan-de-pruebas.md)
+- [Casos de prueba](docs/02-casos-de-prueba.md)
+- [Estrategia de suites](docs/03-estrategia-suites.md)
+- [Proceso de pruebas de API](docs/05-proceso-pruebas-api.md)
+- [Caso de prueba de API](docs/06-caso-de-prueba-api.md)
 - [Convenciones y fases del proyecto](AGENTS.md)
+
+> La documentación de la Sección 1 fue redactada con asistencia de IA y validada manualmente por el candidato. Ver [evidencia B2](docs/evidencias/B2/README.md).
 
 ## Estado del proyecto
 
 - [x] B1 — Scaffold del repositorio y toolchain
-- [ ] B2 — Documentación de la Sección 1
+- [x] B2 — Documentación de la Sección 1
 - [ ] B3 — Bug report
 - [ ] B4 — Núcleo del framework
 - [ ] B5 — Tests UI

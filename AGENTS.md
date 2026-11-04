@@ -351,8 +351,8 @@ Cada fase cierra con estos gates y con evidencia registrada:
 | Tipos | `npm.cmd run typecheck` | 0 errores. |
 | Lint | `npm.cmd run lint` | 0 errores y 0 warnings. |
 | Suite por defecto | `npm.cmd test` | Verde, sin la falla forzada. |
-| Smoke | `npm.cmd run test:smoke` | Verde cuando exista suite Smoke (B3+). |
-| Regresión | `npm.cmd run test:regression` | Verde cuando exista suite Regresión (B3+). |
+| Smoke | `npm.cmd run test:smoke` | Verde cuando exista suite Smoke (B5+). |
+| Regresión | `npm.cmd run test:regression` | Verde cuando exista suite Regresión (B5+). |
 | API | `npm.cmd run test:api` | Verde cuando exista módulo API (B7+). |
 | Falla forzada | `npm.cmd run test:forced-failure` | Rojo esperado, con captura y reporte (B6+). |
 | Evidencia | — | `docs/evidencias/Bn/README.md` con comandos, fecha, salida y links. |
@@ -385,8 +385,9 @@ Reglas:
 ### 9.2 Chats de IA (`docs/ia-chats/`)
 
 - Todos los chats usados para resolver el challenge se guardan **completos y sin alteraciones**: no resumir, recortar ni editar.
-- Formato de nombre: `YYYY-MM-DD-<herramienta>-<tema>.md`.
-- Se incluyen también los chats de planificación y corrección, no solo los de código.
+- Se guarda el **JSON crudo** exportado por la herramienta (formato original); opcionalmente se agrega una versión Markdown legible.
+- Nombres: el JSON conserva el nombre original o `YYYY-MM-DD-<herramienta>-<tema>.json`; la versión MD opcional usa `YYYY-MM-DD-<herramienta>-<tema>.md`.
+- Se incluyen todas las sesiones: planificación, B0, B1, implementación y correcciones, no solo las de código.
 - Nunca pegar credenciales reales, tokens ni datos personales en un chat; usar solo datos de prueba.
 - Esta política es requisito explícito del PDF y se verifica en el Definition of Done.
 
@@ -411,7 +412,7 @@ Reglas:
 - **Gate:** `typecheck` y `lint` verdes; versión de Playwright verificada; estructura revisada; evidencia en `docs/evidencias/B1/`.
 - **Commit:** `chore: bootstrap playwright typescript framework`.
 
-### B2 — Documentación Sección 1 · [ ]
+### B2 — Documentación Sección 1 · [x]
 
 - `docs/01-plan-de-pruebas.md` (IEEE 829 adaptado, Registro/Login/Carrito).
 - `docs/02-casos-de-prueba.md` (3 Login + 3 Carrito, plantilla estructurada).
@@ -419,6 +420,7 @@ Reglas:
 - `docs/05-proceso-pruebas-api.md` (identificación → ejecución).
 - `docs/06-caso-de-prueba-api.md` (Mercado Libre + shop HTTP).
 - **Gate:** los 5 documentos completos y cruzados; el bug se documenta en B3.
+- **Evidencia:** `docs/evidencias/B2/README.md`.
 
 ### B3 — Bug report · [ ]
 
