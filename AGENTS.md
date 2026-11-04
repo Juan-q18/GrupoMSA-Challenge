@@ -466,11 +466,12 @@ Reglas:
 - **Gate:** `test:api` verde; evidencia en `docs/evidencias/B7/`.
 - **Evidencia:** `docs/evidencias/B7/README.md`.
 
-### B8 — Reporter y README · [ ]
+### B8 — Reporter y README · [x]
 
 - HTML Reporter verificado y documentado (generación y apertura).
 - README final con instalación, dependencias, navegadores, `.env`, comandos y ejecución del reporte.
 - **Gate:** reporte generado y referenciado; README revisado; evidencia en `docs/evidencias/B8/`.
+- **Evidencia:** `docs/evidencias/B8/README.md`.
 
 ### B9 — Cierre y publicación · [ ]
 
