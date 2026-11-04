@@ -2,7 +2,7 @@
 
 Framework de automatización E2E y de API para [Tricentis Demo Web Shop](https://demowebshop.tricentis.com), desarrollado con **Playwright + TypeScript** como parte del challenge técnico de QA Manual con Automation.
 
-> **Estado:** B6 completado (falla forzada, captura on-failure y HTML report). La API, el README final y el cierre se incorporan en las fases siguientes.
+> **Estado:** B7 completado (clientes API + casos Mercado Libre y shop HTTP). El README final y el cierre se incorporan en las fases siguientes.
 
 ## Stack
 
@@ -73,6 +73,7 @@ tests/api/             Tests de API
 - [Evidencia B4 — Núcleo del framework](docs/evidencias/B4/README.md)
 - [Evidencia B5 — Tests UI](docs/evidencias/B5/README.md)
 - [Evidencia B6 — Falla forzada](docs/evidencias/B6/README.md)
+- [Evidencia B7 — API](docs/evidencias/B7/README.md)
 - [Convenciones y fases del proyecto](AGENTS.md)
 
 > La documentación de la Sección 1 fue redactada con asistencia de IA y validada manualmente por el candidato. Ver [evidencia B2](docs/evidencias/B2/README.md).
@@ -85,6 +86,6 @@ tests/api/             Tests de API
 - [x] B4 — Núcleo del framework
 - [x] B5 — Tests UI
 - [x] B6 — Falla forzada y capturas
-- [ ] B7 — API
+- [x] B7 — API
 - [ ] B8 — Reporter y README final
 - [ ] B9 — Cierre y publicación

@@ -458,12 +458,13 @@ Reglas:
 - **Gate:** `test:forced-failure` rojo esperado; `npm.cmd test` sigue verde; `test:all` con 7 passed + 1 failed esperado y HTML report generado; evidencia con captura.
 - **Evidencia:** `docs/evidencias/B6/README.md`.
 
-### B7 — API · [ ]
+### B7 — API · [x]
 
 - Cliente API con `APIRequestContext`.
 - Test de Mercado Libre que valide `departments`.
 - Caso HTTP del shop (status, content-type, body) para Sección 1.
 - **Gate:** `test:api` verde; evidencia en `docs/evidencias/B7/`.
+- **Evidencia:** `docs/evidencias/B7/README.md`.
 
 ### B8 — Reporter y README · [ ]
 

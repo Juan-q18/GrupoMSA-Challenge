@@ -317,8 +317,8 @@ El PDF exige **3 casos manuales de Login** y **3 de Carrito**, no casos manuales
 | `CP-CART-03` | Manual | — | `@regression` | B2 (`docs/evidencias/B2/README.md`) |
 | `AUTO-REG-01` | Automatizado | `AUTO-REG-01` | `@smoke @regression` | B5 (`docs/evidencias/B5/README.md`) |
 | `AUTO-REG-02` | Automatizado | `AUTO-REG-02` | `@regression` | B5 (`docs/evidencias/B5/README.md`) |
-| `API-ML-01` | API | `tests/api/mercadolibre.spec.ts` | — | B7 (`docs/evidencias/B7/README.md`) |
-| `API-SHOP-01` | HTTP | `tests/api/shop-http.spec.ts` | — | B7 (`docs/evidencias/B7/README.md`) |
+| `API-ML-01` | API | `tests/api/mercadolibre.spec.ts` | — | B7: implementado, 2 passed ([evidencia](evidencias/B7/README.md)) |
+| `API-SHOP-01` | HTTP | `tests/api/shop-http.spec.ts` | — | B7: implementado, 2 passed ([evidencia](evidencias/B7/README.md)) |
 
 La regla de suites se detalla en `docs/03-estrategia-suites.md`: todo caso Smoke es también Regresión; la falla forzada no pertenece a ninguna de las dos suites.
 

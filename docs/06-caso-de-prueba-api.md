@@ -4,9 +4,9 @@
 **Documento:** `docs/06-caso-de-prueba-api.md`
 **Versión:** 1.0
 **Fecha:** 2026-11-04
-**Estado:** Completado (B2)
+**Estado:** Implementado en B7
 
-> **Autoría:** Este documento fue redactado con asistencia de IA y validado manualmente por el candidato. Las respuestas observadas se obtuvieron contra los servicios reales y se registran en [`docs/evidencias/B2/README.md`](evidencias/B2/README.md). La implementación automatizada se hará en B7.
+> **Autoría:** Este documento fue redactado con asistencia de IA y validado manualmente por el candidato. Las respuestas observadas se obtuvieron contra los servicios reales y se registran en [`docs/evidencias/B2/README.md`](evidencias/B2/README.md). La implementación automatizada se completó en B7; su evidencia está en [`docs/evidencias/B7/README.md`](evidencias/B7/README.md).
 
 ---
 
@@ -32,7 +32,14 @@ Documentar dos casos de prueba de API/HTTP de la Sección 1:
 | Herramienta principal | Playwright `APIRequestContext`. |
 | Herramientas de apoyo | Postman, curl, DevTools → Network. |
 | Evidencia B2 | `docs/evidencias/B2/README.md`. |
-| Evidencia de automatización | `docs/evidencias/B7/README.md` (B7). |
+| Evidencia de automatización | [`docs/evidencias/B7/README.md`](evidencias/B7/README.md) (B7). |
+
+### 2.1 Estado de implementación B7
+
+| Caso | Test implementado | Estado | Evidencia |
+|---|---|---|---|
+| `API-ML-01` | `tests/api/mercadolibre.spec.ts` — `[API-ML-01] GET /menu/departments returns departments with name and categories` | Implementado y passing | [`docs/evidencias/B7/README.md`](evidencias/B7/README.md) |
+| `API-SHOP-01` | `tests/api/shop-http.spec.ts` — `[API-SHOP-01] POST addproducttocart returns success and cart confirmation` | Implementado y passing | [`docs/evidencias/B7/README.md`](evidencias/B7/README.md) |
 
 Variables relevantes de `.env.example`:
 
@@ -57,8 +64,8 @@ ML_BASE_URL=https://www.mercadolibre.com.ar
 | **Datos** | Ninguno. No se envían credenciales ni cookies. |
 | **Método / URL** | `GET {ML_BASE_URL}/menu/departments` |
 | **Resultado esperado** | `200 OK`; content-type JSON; `departments` array no vacío; cada departamento con `name` y `categories`. |
-| **Automatización** | `tests/api/mercadolibre.spec.ts` (B7) |
-| **Evidencia** | B2: [`docs/evidencias/B2/README.md`](evidencias/B2/README.md). B7: `docs/evidencias/B7/README.md`. |
+| **Automatización** | `tests/api/mercadolibre.spec.ts` — `[API-ML-01] GET /menu/departments returns departments with name and categories` |
+| **Evidencia** | B2: [`docs/evidencias/B2/README.md`](evidencias/B2/README.md). B7: [`docs/evidencias/B7/README.md`](evidencias/B7/README.md). |
 
 ### 3.2 Request
 
@@ -156,8 +163,8 @@ El caso sirve para verificar que el comportamiento HTTP observado sigue respondi
 | **Datos** | Producto id `31`; cantidad `1`; sin credenciales. |
 | **Método / URL** | `POST {BASE_URL}/addproducttocart/details/31/1` |
 | **Resultado esperado** | `200 OK`; content-type JSON; `success: true`; mensaje de producto agregado; contador actualizado. |
-| **Automatización** | `tests/api/shop-http.spec.ts` (B7) |
-| **Evidencia** | B2: [`docs/evidencias/B2/README.md`](evidencias/B2/README.md). B7: `docs/evidencias/B7/README.md`. |
+| **Automatización** | `tests/api/shop-http.spec.ts` — `[API-SHOP-01] POST addproducttocart returns success and cart confirmation` |
+| **Evidencia** | B2: [`docs/evidencias/B2/README.md`](evidencias/B2/README.md). B7: [`docs/evidencias/B7/README.md`](evidencias/B7/README.md). |
 
 ### 4.3 Request
 
@@ -267,22 +274,24 @@ Ejemplo de respuesta saneada (fragmento):
 
 ## 6. Ejecución y reporte
 
-La implementación se realizará en B7 con Playwright `APIRequestContext`:
+La implementación se completó en B7 con Playwright `APIRequestContext`:
 
 ```powershell
 npm.cmd run test:api
 ```
 
-Cada test debe:
+Resultado: **2 passed**.
 
-- usar `ML_BASE_URL` o `BASE_URL` desde `.env`;
-- no usar `API_BASE_URL`;
-- validar status y content-type antes de parsear;
-- usar assertions claras y mensajes que identifiquen la regla de negocio;
-- no persistir cookies ni tokens;
-- dejar evidencia en `docs/evidencias/B7/README.md`.
+Cada test:
 
-En B2 no se ejecutó la suite porque todavía no existen tests. Las respuestas observadas se obtuvieron manualmente y quedan registradas en la evidencia de B2.
+- usa `ML_BASE_URL` o `BASE_URL` desde `.env`;
+- no usa `API_BASE_URL`;
+- valida status y content-type antes de parsear;
+- usa assertions claras sobre la regla de negocio;
+- no persiste cookies ni tokens;
+- deja evidencia en [`docs/evidencias/B7/README.md`](evidencias/B7/README.md).
+
+En B2 se validaron manualmente las respuestas y se registraron en la evidencia de B2. En B7 se implementaron y ejecutaron los dos tests automatizados.
 
 ---
 
