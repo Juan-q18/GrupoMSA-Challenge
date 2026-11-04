@@ -11,7 +11,7 @@ El repositorio reúne:
 **Target UI:** [https://demowebshop.tricentis.com](https://demowebshop.tricentis.com)
 **Target API Mercado Libre:** `https://www.mercadolibre.com.ar/menu/departments`
 
-> **Estado:** B8 completado (reporter, README final y evidencia). Solo queda B9: cierre, chats de IA y publicación del repositorio público.
+> **Estado:** B9 completado (cierre, chats de IA y publicación). El challenge queda a la espera del OK final del usuario.
 
 ---
 
@@ -33,7 +33,7 @@ El checkout se menciona solo como contexto del flujo de compra; el defecto detec
 - **Bug:** defecto real en Tricentis, con fallback documentado a `https://shop.qaautomationlabs.com` si no se detectara.
 - **API de Sección 1:** Mercado Libre + caso HTTP del shop.
 - **Falla forzada:** exactamente un test determinista, intencional y fuera de las suites Smoke/Regresión.
-- **Chats de IA:** completos y sin alteraciones en `docs/ia-chats/` (se incorporan en B9).
+- **Chats de IA:** completos y sin alteraciones en `docs/ia-chats/` (JSON crudo).
 
 ---
 
@@ -71,7 +71,7 @@ El checkout se menciona solo como contexto del flujo de compra; el defecto detec
 ### 4.1 Windows (PowerShell)
 
 ```powershell
-git clone <URL-DEL-REPOSITORIO>
+git clone https://github.com/Juan-q18/GrupoMSA-Challenge.git
 Set-Location GrupoMSA-Challenge
 
 npm.cmd ci
@@ -82,7 +82,7 @@ Copy-Item .env.example .env
 ### 4.2 Linux / macOS
 
 ```bash
-git clone <URL-DEL-REPOSITORIO>
+git clone https://github.com/Juan-q18/GrupoMSA-Challenge.git
 cd GrupoMSA-Challenge
 
 npm ci
@@ -90,7 +90,7 @@ npx playwright install chromium
 cp .env.example .env
 ```
 
-> El repositorio público todavía no fue publicado; la URL se agrega en B9. Para trabajar localmente, el repo está en `B:\GrupoMSA-Challenge`.
+> El repositorio público está en https://github.com/Juan-q18/GrupoMSA-Challenge. Para trabajar localmente también está en `B:\GrupoMSA-Challenge`.
 
 Si se quiere ejecutar Firefox como navegador opcional:
 
@@ -241,22 +241,25 @@ La falla forzada se excluye de `test` y de `test:regression` con `--grep-invert 
 
 ## 9. Documentación y evidencias
 
-### 9.1 Documentación de la Sección 1
+### 9.1 Documentación
 
 | Documento | Contenido |
 |---|---|
-| [`docs/README.md`](docs/README.md) | Índice general de documentación. |
+| [`docs/README.md`](docs/README.md) | Índice general de documentación y evidencias. |
 | [`docs/01-plan-de-pruebas.md`](docs/01-plan-de-pruebas.md) | Test Plan IEEE 829 adaptado: alcance, estrategia, entornos, riesgos, cronograma y trazabilidad. |
 | [`docs/02-casos-de-prueba.md`](docs/02-casos-de-prueba.md) | 3 casos de Login + 3 de Carrito, con Gherkin, metadatos y estados. |
 | [`docs/03-estrategia-suites.md`](docs/03-estrategia-suites.md) | Smoke vs. Regresión, justificación y mapeo de tags. |
 | [`docs/04-reporte-defecto.md`](docs/04-reporte-defecto.md) | **BUG-001**: checkout acepta ZIP/teléfono inválidos y permite llegar a Confirm order. Severidad Alta, prioridad Alta, abierto. |
 | [`docs/05-proceso-pruebas-api.md`](docs/05-proceso-pruebas-api.md) | Proceso de pruebas de API de identificación a reporte. |
 | [`docs/06-caso-de-prueba-api.md`](docs/06-caso-de-prueba-api.md) | Casos `API-ML-01` y `API-SHOP-01`, implementados en B7. |
+| [`docs/07-checklist-entrega.md`](docs/07-checklist-entrega.md) | Trazabilidad completa contra el PDF y estado de entrega. |
+| [`docs/08-mail-entrega.md`](docs/08-mail-entrega.md) | Borrador del mail de entrega; no enviado. |
 
 ### 9.2 Evidencias por fase
 
 | Fase | Evidencia |
 |---|---|
+| B0 — Contexto y convenciones | [`docs/evidencias/B0/README.md`](docs/evidencias/B0/README.md) |
 | B1 — Scaffold y toolchain | [`docs/evidencias/B1/README.md`](docs/evidencias/B1/README.md) |
 | B2 — Documentación Sección 1 | [`docs/evidencias/B2/README.md`](docs/evidencias/B2/README.md) |
 | B3 — Bug report BUG-001 | [`docs/evidencias/B3/README.md`](docs/evidencias/B3/README.md) |
@@ -265,12 +268,19 @@ La falla forzada se excluye de `test` y de `test:regression` con `--grep-invert 
 | B6 — Falla forzada | [`docs/evidencias/B6/README.md`](docs/evidencias/B6/README.md) |
 | B7 — API | [`docs/evidencias/B7/README.md`](docs/evidencias/B7/README.md) |
 | B8 — Reporter y README | [`docs/evidencias/B8/README.md`](docs/evidencias/B8/README.md) |
+| B9 — Cierre y publicación | [`docs/evidencias/B9/README.md`](docs/evidencias/B9/README.md) |
 
 Las capturas de fallas y del HTML Reporter están versionadas en `docs/evidencias/B6/` y `docs/evidencias/B8/`. `test-results/` y `playwright-report/` son artefactos generados y no se versionan.
 
 ### 9.3 Chats de IA
 
-Todos los chats completos y sin alteraciones se incorporan en `docs/ia-chats/` durante B9: JSON crudo exportado por la herramienta y, opcionalmente, una versión Markdown legible. No se incluyen credenciales reales.
+Los chats completos y sin alteraciones están en:
+
+- [`docs/ia-chats/01-planificacion.json`](docs/ia-chats/01-planificacion.json) — sesión de planificación.
+- [`docs/ia-chats/02-implementacion-b0-b9.json`](docs/ia-chats/02-implementacion-b0-b9.json) — sesión de implementación B0–B9.
+- [`docs/ia-chats/README.md`](docs/ia-chats/README.md) — índice y política de exportación.
+
+Son JSON crudo exportado por la herramienta; no se editaron a mano.
 
 ---
 
@@ -363,14 +373,14 @@ Las capturas de la falla forzada de B6 están en `docs/evidencias/B6/`.
 
 La documentación de la Sección 1 y los artefactos de evidencia fueron redactados con asistencia de IA y **validados manualmente por el candidato** contra el sitio y los servicios reales. No se presentan como escritos a mano.
 
-Los chats completos y sin alteraciones se guardan en `docs/ia-chats/` durante B9, en el formato exportado por la herramienta (JSON crudo) y, opcionalmente, una versión Markdown legible.
+Los chats completos y sin alteraciones están en `docs/ia-chats/` en formato JSON crudo exportado por la herramienta. El índice y la política de exportación están en [`docs/ia-chats/README.md`](docs/ia-chats/README.md).
 
 ---
 
 ## 16. Repositorio
 
 - **Repo local:** `B:\GrupoMSA-Challenge`
-- **Repo público:** pendiente de publicación en B9. La URL se agregará cuando el repositorio sea público; no se inventa en este documento.
+- **Repo público:** https://github.com/Juan-q18/GrupoMSA-Challenge
 
 ## 17. Estado del proyecto
 
@@ -383,4 +393,4 @@ Los chats completos y sin alteraciones se guardan en `docs/ia-chats/` durante B9
 - [x] B6 — Falla forzada y capturas
 - [x] B7 — API
 - [x] B8 — Reporter y README final
-- [ ] B9 — Cierre y publicación
+- [x] B9 — Cierre y publicación

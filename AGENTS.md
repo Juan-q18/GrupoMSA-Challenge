@@ -131,12 +131,17 @@ El PDF menciona `http://demowebshop.tricentis.com`; se usa **HTTPS** como URL ca
 │   ├── 04-reporte-defecto.md         # Sección 1, punto 4
 │   ├── 05-proceso-pruebas-api.md     # Sección 1, punto 5
 │   ├── 06-caso-de-prueba-api.md      # Sección 1, punto 6
+│   ├── 07-checklist-entrega.md       # Checklist de entrega (PDF)
+│   ├── 08-mail-entrega.md            # Borrador del mail de entrega
 │   ├── evidencias/
 │   │   ├── B0/
 │   │   ├── B1/
 │   │   ├── ...
 │   │   └── B9/
-│   └── ia-chats/                     # chats completos, sin alteraciones
+│   └── ia-chats/
+│       ├── README.md
+│       ├── 01-planificacion.json
+│       └── 02-implementacion-b0-b9.json
 ├── src/
 │   ├── config/
 │   │   └── env.ts                    # lectura y validación de variables de entorno
@@ -473,12 +478,14 @@ Reglas:
 - **Gate:** reporte generado y referenciado; README revisado; evidencia en `docs/evidencias/B8/`.
 - **Evidencia:** `docs/evidencias/B8/README.md`.
 
-### B9 — Cierre y publicación · [ ]
+### B9 — Cierre y publicación · [x]
 
 - Índice final de evidencias B0–B9 y chats de IA completos; incluir el transcript íntegro de todas las sesiones (incluida B0) en `docs/ia-chats/`.
 - Correr `npm.cmd run verify`, `npm.cmd run test:forced-failure` y `npm.cmd run report`.
 - Publicar en GitHub público y compartir el enlace.
 - **Gate:** Definition of Done completo y OK final del usuario.
+- **Evidencia:** `docs/evidencias/B9/README.md`.
+- **Estado:** entregables y push completados; OK final del usuario pendiente.
 
 ---
 
@@ -486,20 +493,20 @@ Reglas:
 
 El challenge está terminado cuando:
 
-- [ ] Los 6 puntos de la Sección 1 están documentados en `docs/` y son trazables.
-- [ ] El Test Plan cubre Registro, Login y Carrito con estructura IEEE 829 adaptada.
-- [ ] Hay 3 casos manuales de Login y 3 de Carrito, con pasos, datos y resultados esperados.
-- [ ] La estrategia Smoke/Regresión está justificada y coincide con los tags del código.
-- [ ] El bug report describe un defecto real y reproducible, con evidencia; si se usó el fallback, está explicitado.
-- [ ] El proceso de pruebas de API y el caso documentado (Mercado Libre + shop HTTP) están completos.
-- [ ] El framework compila en TypeScript strict y pasa el lint sin errores ni warnings.
-- [ ] Los 6 tests automatizados (2 Registro, 2 Login, 2 Carrito) pasan en Chromium.
-- [ ] Existe exactamente una falla forzada, con captura y referencia en el reporte/evidencia.
-- [ ] El HTML Reporter se genera y se puede abrir con `npm.cmd run report`.
-- [ ] El test de Mercado Libre valida `departments` y el caso HTTP del shop pasa.
-- [ ] No hay `waitForTimeout`, credenciales hardcodeadas, `.only` ni debug olvidado.
-- [ ] `docs/evidencias/B0`–`B9` están indexadas y con comandos/resultados reales.
-- [ ] `docs/ia-chats/` contiene todos los chats completos y sin alteraciones.
-- [ ] El README permite instalar y ejecutar el proyecto desde cero.
-- [ ] El repositorio es público y el enlace fue compartido.
+- [x] Los 6 puntos de la Sección 1 están documentados en `docs/` y son trazables.
+- [x] El Test Plan cubre Registro, Login y Carrito con estructura IEEE 829 adaptada.
+- [x] Hay 3 casos manuales de Login y 3 de Carrito, con pasos, datos y resultados esperados.
+- [x] La estrategia Smoke/Regresión está justificada y coincide con los tags del código.
+- [x] El bug report describe un defecto real y reproducible, con evidencia; si se usó el fallback, está explicitado.
+- [x] El proceso de pruebas de API y el caso documentado (Mercado Libre + shop HTTP) están completos.
+- [x] El framework compila en TypeScript strict y pasa el lint sin errores ni warnings.
+- [x] Los 6 tests automatizados (2 Registro, 2 Login, 2 Carrito) pasan en Chromium.
+- [x] Existe exactamente una falla forzada, con captura y referencia en el reporte/evidencia.
+- [x] El HTML Reporter se genera y se puede abrir con `npm.cmd run report`.
+- [x] El test de Mercado Libre valida `departments` y el caso HTTP del shop pasa.
+- [x] No hay `waitForTimeout`, credenciales hardcodeadas, `.only` ni debug olvidado.
+- [x] `docs/evidencias/B0`–`B9` están indexadas y con comandos/resultados reales.
+- [x] `docs/ia-chats/` contiene todos los chats completos y sin alteraciones.
+- [x] El README permite instalar y ejecutar el proyecto desde cero.
+- [x] El repositorio es público y el enlace fue compartido.
 - [ ] El usuario dio el OK final.
