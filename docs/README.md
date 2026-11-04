@@ -22,6 +22,7 @@ Las evidencias por fase se registran en `docs/evidencias/Bn/README.md`, con coma
 - [B3 — Bug report BUG-001](evidencias/B3/README.md)
 - [B4 — Núcleo del framework](evidencias/B4/README.md)
 - [B5 — Tests UI](evidencias/B5/README.md)
+- [B6 — Falla forzada y capturas](evidencias/B6/README.md)
 
 ## Autoría y validación
 

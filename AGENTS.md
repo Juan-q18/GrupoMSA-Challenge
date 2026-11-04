@@ -451,11 +451,12 @@ Reglas:
 - **Gate:** suites UI, Smoke y Regresión verdes; evidencia en `docs/evidencias/B5/`.
 - **Evidencia:** `docs/evidencias/B5/README.md`.
 
-### B6 — Falla forzada y capturas · [ ]
+### B6 — Falla forzada y capturas · [x]
 
 - Exactamente un test `[AUTO-FF-01] @forced-failure`, determinista y documentado.
 - Verificar que la captura on-failure se adjunta al reporte y se copia a `docs/evidencias/B6/`.
-- **Gate:** `test:forced-failure` rojo esperado; `npm.cmd test` sigue verde; evidencia con captura.
+- **Gate:** `test:forced-failure` rojo esperado; `npm.cmd test` sigue verde; `test:all` con 7 passed + 1 failed esperado y HTML report generado; evidencia con captura.
+- **Evidencia:** `docs/evidencias/B6/README.md`.
 
 ### B7 — API · [ ]
 
