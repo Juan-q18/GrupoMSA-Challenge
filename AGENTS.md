@@ -422,12 +422,13 @@ Reglas:
 - **Gate:** los 5 documentos completos y cruzados; el bug se documenta en B3.
 - **Evidencia:** `docs/evidencias/B2/README.md`.
 
-### B3 — Bug report · [ ]
+### B3 — Bug report · [x]
 
 - Buscar un defecto real y reproducible en Tricentis Demo Web Shop.
 - Si no se detecta, usar el fallback `https://shop.qaautomationlabs.com` y explicitarlo.
 - `docs/04-reporte-defecto.md` con pasos, resultado esperado/actual, severidad, prioridad y evidencia.
 - **Gate:** bug reproducible con evidencia, o fallback documentado.
+- **Evidencia:** `docs/evidencias/B3/README.md`.
 
 ### B4 — Núcleo del framework · [ ]
 
